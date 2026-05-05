@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>20,000 sq ft School Floor Plan</title>
+  <style>
+    :root {
+      /* Hardcoded plan dimensions.
+         1 ft = 8 px, so the main 160' width renders as 1280 px. */
+      --ft: 8px;
+      --gap: 10px;
+      --border: #526274;
+      --text: #1f2328;
+      --office: #f2efff;
+      --classroom: #eef7ff;
+      --library: #dffdee;
+      --kitchen: #ffd9a6;
+      --hall: #fff5ce;
+      --service: #f7f9fc;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #f3f5f8;
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+    }
+
+    .sheet {
+      width: min(96vw, calc(160 * var(--ft) + 2rem));
+      overflow-x: auto;
+      padding: 1rem;
+    }
+
+    .plan {
+      width: calc(160 * var(--ft));
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+      margin-inline: auto;
+    }
+
+    .row {
+      display: flex;
+      gap: var(--gap);
+      width: 100%;
+    }
+
+    .top-row,
+    .bottom-row {
+      height: calc(25 * var(--ft));
+    }
+
+    .middle-row {
+      height: calc(75 * var(--ft));
+      align-items: stretch;
+    }
+
+    .corridor {
+      height: calc(8 * var(--ft));
+      width: 100%;
+      border-style: dashed;
+      background: linear-gradient(180deg, #fff9db, var(--hall));
+      color: #9a441f;
+    }
+
+    .side-stack {
+      width: calc(25 * var(--ft));
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+    }
+
+    .right-stack {
+      width: calc(20 * var(--ft));
+    }
+
+    .side-hall-wrap {
+      width: calc(8 * var(--ft));
+      display: flex;
+      align-items: center;
+    }
+
+    .side-hall {
+      width: 100%;
+      height: calc(31.25 * var(--ft));
+      border-style: dashed;
+      background: linear-gradient(90deg, #fff9db, var(--hall));
+      color: #9a441f;
+    }
+
+    .center-area {
+      flex: 1 1 auto;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+    }
+
+    .center-top {
+      height: calc(25 * var(--ft));
+      display: flex;
+      gap: var(--gap);
+    }
+
+    .cafeteria {
+      flex: 1 1 auto;
+      min-height: 0;
+      width: 100%;
+      background: linear-gradient(180deg, #ffddb4, var(--kitchen));
+    }
+
+    .room {
+      min-width: 0;
+      border: 2px solid var(--border);
+      border-radius: 9px;
+      background: white;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.45), 0 1px 3px rgba(0,0,0,.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      line-height: 1.3;
+      padding: .5rem;
+    }
+
+    .office { background: linear-gradient(145deg, #fbfaff, var(--office)); }
+    .classroom { background: linear-gradient(145deg, #f8fcff, var(--classroom)); }
+    .library { background: linear-gradient(145deg, #f2fff8, var(--library)); }
+    .kitchen { background: linear-gradient(145deg, #ffe4bf, var(--kitchen)); }
+    .service { background: linear-gradient(145deg, #fff, var(--service)); }
+
+    .label {
+      font-weight: 800;
+      font-size: 1.05rem;
+      margin-bottom: .7rem;
+    }
+
+    .big .label { font-size: 1.25rem; }
+    .area, .dims { font-size: .95rem; }
+    .dims { margin-top: .35rem; }
+
+    /* Dimension classes: hardcoded room widths/heights. */
+    .w-15 { width: calc(15 * var(--ft)); }
+    .w-20 { width: calc(20 * var(--ft)); }
+    .w-25 { width: calc(25 * var(--ft)); }
+    .w-30 { width: calc(30 * var(--ft)); }
+    .w-35 { width: calc(35 * var(--ft)); }
+    .w-40 { width: calc(40 * var(--ft)); }
+    .w-100 { width: calc(100 * var(--ft)); }
+    .h-25 { height: calc(25 * var(--ft)); }
+    .h-fill { flex: 1 1 0; }
+
+    @media (max-width: 900px) {
+      :root { --ft: 6px; --gap: 8px; }
+      .label { font-size: .9rem; }
+      .big .label { font-size: 1rem; }
+      .area, .dims { font-size: .78rem; }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <section class="plan" aria-label="20,000 square foot school floor plan">
+      <div class="row top-row">
+        <div class="room office w-20 h-25">
+          <div class="label">Admin Office</div>
+          <div class="area">500 sq ft</div>
+          <div class="dims">20' × 25'</div>
+        </div>
+        <div class="room office w-15 h-25">
+          <div class="label">Reception</div>
+          <div class="area">375 sq ft</div>
+          <div class="dims">15' × 25'</div>
+        </div>
+        <div class="room office w-35 h-25">
+          <div class="label">Lobby / Entry</div>
+          <div class="area">875 sq ft</div>
+          <div class="dims">35' × 25'</div>
+        </div>
+        <div class="room office w-20 h-25">
+          <div class="label">Counseling</div>
+          <div class="area">500 sq ft</div>
+          <div class="dims">20' × 25'</div>
+        </div>
+        <div class="room service w-25 h-25">
+          <div class="label">Restrooms</div>
+          <div class="area">625 sq ft</div>
+          <div class="dims">25' × 25'</div>
+        </div>
+      </div>
+
+      <div class="room corridor big">
+        <div class="label">North Corridor</div>
+        <div class="area">1,280 sq ft</div>
+        <div class="dims">160' × 8'</div>
+      </div>
+
+      <div class="row middle-row">
+        <div class="side-stack">
+          <div class="room classroom h-fill">
+            <div class="label">Classroom<br>01</div>
+            <div class="area">625 sq ft</div>
+            <div class="dims">25' × 25'</div>
+          </div>
+          <div class="room classroom h-fill">
+            <div class="label">Classroom<br>02</div>
+            <div class="area">625 sq ft</div>
+            <div class="dims">25' × 25'</div>
+          </div>
+        </div>
+
+        <div class="side-hall-wrap">
+          <div class="room side-hall">
+            <div class="label">West<br>Hall</div>
+            <div class="area">250 sq ft</div>
+            <div class="dims">8' × 31.25'</div>
+          </div>
+        </div>
+
+        <div class="center-area">
+          <div class="center-top">
+            <div class="room library w-30 h-25">
+              <div class="label">Small Library</div>
+              <div class="area">750 sq ft</div>
+              <div class="dims">30' × 25'</div>
+            </div>
+            <div class="room service w-20 h-25">
+              <div class="label">Clinic</div>
+              <div class="area">500 sq ft</div>
+              <div class="dims">20' × 25'</div>
+            </div>
+            <div class="room kitchen w-40 h-25 big">
+              <div class="label">Kitchen</div>
+              <div class="area">1,000 sq ft</div>
+              <div class="dims">40' × 25'</div>
+            </div>
+          </div>
+
+          <div class="room cafeteria big">
+            <div class="label">Cafeteria</div>
+            <div class="area">5,000 sq ft</div>
+            <div class="dims">100' × 50'</div>
+          </div>
+        </div>
+
+        <div class="side-hall-wrap">
+          <div class="room side-hall">
+            <div class="label">East<br>Hall</div>
+            <div class="area">250 sq ft</div>
+            <div class="dims">8' × 31.25'</div>
+          </div>
+        </div>
+
+        <div class="side-stack right-stack">
+          <div class="room service h-fill">
+            <div class="label">Mech /<br>Electrical</div>
+            <div class="area">500 sq ft</div>
+            <div class="dims">20' × 25'</div>
+          </div>
+          <div class="room classroom h-fill">
+            <div class="label">Classroom<br>04</div>
+            <div class="area">625 sq ft</div>
+            <div class="dims">25' × 25'</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="room corridor big">
+        <div class="label">South Hall</div>
+        <div class="area">1,280 sq ft</div>
+        <div class="dims">160' × 8'</div>
+      </div>
+
+      <div class="row bottom-row">
+        <div class="room classroom h-25" style="flex: 1 1 0;">
+          <div class="label">Classroom 05</div>
+          <div class="area">625 sq ft</div>
+          <div class="dims">25' × 25'</div>
+        </div>
+        <div class="room classroom h-25" style="flex: 1 1 0;">
+          <div class="label">Classroom 06</div>
+          <div class="area">625 sq ft</div>
+          <div class="dims">25' × 25'</div>
+        </div>
+        <div class="room classroom h-25" style="flex: 1 1 0;">
+          <div class="label">Classroom 07</div>
+          <div class="area">625 sq ft</div>
+          <div class="dims">25' × 25'</div>
+        </div>
+        <div class="room classroom h-25" style="flex: 1 1 0;">
+          <div class="label">Classroom 08</div>
+          <div class="area">625 sq ft</div>
+          <div class="dims">25' × 25'</div>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
