@@ -32,22 +32,18 @@
     }
 
     .sheet {
-      width: min(96vw, calc(160 * var(--ft) + 2rem));
+      width: min(96vw, calc(160 * var(--ft)));
       overflow-x: auto;
-      padding: 1rem;
     }
 
     .plan {
       width: calc(160 * var(--ft));
       display: flex;
       flex-direction: column;
-      gap: var(--gap);
-      margin-inline: auto;
     }
 
     .row {
       display: flex;
-      gap: var(--gap);
       width: 100%;
     }
 
@@ -64,7 +60,6 @@
     .corridor {
       height: calc(8 * var(--ft));
       width: 100%;
-      border-style: dashed;
       background: linear-gradient(180deg, #fff9db, var(--hall));
       color: #9a441f;
     }
@@ -73,7 +68,6 @@
       width: calc(25 * var(--ft));
       display: flex;
       flex-direction: column;
-      gap: var(--gap);
     }
 
     .right-stack {
@@ -89,7 +83,6 @@
     .side-hall {
       width: 100%;
       height: calc(31.25 * var(--ft));
-      border-style: dashed;
       background: linear-gradient(90deg, #fff9db, var(--hall));
       color: #9a441f;
     }
@@ -99,13 +92,11 @@
       min-width: 0;
       display: flex;
       flex-direction: column;
-      gap: var(--gap);
     }
 
     .center-top {
       height: calc(25 * var(--ft));
       display: flex;
-      gap: var(--gap);
     }
 
     .cafeteria {
@@ -117,17 +108,13 @@
 
     .room {
       min-width: 0;
-      border: 2px solid var(--border);
-      border-radius: 9px;
       background: white;
-      box-shadow: inset 0 0 0 1px rgba(255,255,255,.45), 0 1px 3px rgba(0,0,0,.1);
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       line-height: 1.3;
-      padding: .5rem;
     }
 
     .office { background: linear-gradient(145deg, #fbfaff, var(--office)); }
