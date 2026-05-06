@@ -8,6 +8,8 @@
     :root {
       /* Plan scale: 1 px = 1 ft. */
       --ft: 1px;
+      --gap: 10px;
+      --border: #526274;
       --text: #1f2328;
       --office: #f2efff;
       --classroom: #eef7ff;
@@ -124,9 +126,11 @@
     .label {
       font-weight: 800;
       font-size: 1.05rem;
+      margin-bottom: 0;
     }
 
     .big .label { font-size: 1.25rem; }
+    .dims { font-size: .95rem; margin-top: .35rem; }
 
     /* Dimension classes: hardcoded room widths/heights. */
     .w-15 { width: calc(15 * var(--ft)); }
@@ -140,8 +144,10 @@
     .h-fill { flex: 1 1 0; }
 
     @media (max-width: 900px) {
+      :root { --gap: 8px; }
       .label { font-size: .9rem; }
       .big .label { font-size: 1rem; }
+      .dims { font-size: .78rem; }
     }
   </style>
 </head>
@@ -151,38 +157,47 @@
       <div class="row top-row">
         <div class="room office w-20 h-25">
           <div class="label">Admin Office</div>
+          <div class="dims">20' × 25'</div>
         </div>
         <div class="room office w-15 h-25">
           <div class="label">Reception</div>
+          <div class="dims">15' × 25'</div>
         </div>
         <div class="room office w-35 h-25">
           <div class="label">Lobby / Entry</div>
+          <div class="dims">35' × 25'</div>
         </div>
         <div class="room office w-20 h-25">
           <div class="label">Counseling</div>
+          <div class="dims">20' × 25'</div>
         </div>
         <div class="room service w-25 h-25">
           <div class="label">Restrooms</div>
+          <div class="dims">25' × 25'</div>
         </div>
       </div>
 
       <div class="room corridor big">
         <div class="label">North Corridor</div>
+        <div class="dims">160' × 8'</div>
       </div>
 
       <div class="row middle-row">
         <div class="side-stack">
           <div class="room classroom w-25 h-25">
             <div class="label">Classroom<br>01</div>
+            <div class="dims">25' × 25'</div>
           </div>
           <div class="room classroom w-25 h-25">
             <div class="label">Classroom<br>02</div>
+            <div class="dims">25' × 25'</div>
           </div>
         </div>
 
         <div class="side-hall-wrap">
           <div class="room side-hall">
             <div class="label">West<br>Hall</div>
+            <div class="dims">8' × 31.25'</div>
           </div>
         </div>
 
@@ -190,52 +205,64 @@
           <div class="center-top">
             <div class="room library w-30 h-25">
               <div class="label">Small Library</div>
+              <div class="dims">30' × 25'</div>
             </div>
             <div class="room service w-20 h-25">
               <div class="label">Clinic</div>
+              <div class="dims">20' × 25'</div>
             </div>
             <div class="room kitchen w-40 h-25 big">
               <div class="label">Kitchen</div>
+              <div class="dims">40' × 25'</div>
             </div>
           </div>
 
           <div class="room cafeteria big">
             <div class="label">Cafeteria</div>
+            <div class="dims">100' × 50'</div>
           </div>
         </div>
 
         <div class="side-hall-wrap">
           <div class="room side-hall">
             <div class="label">East<br>Hall</div>
+            <div class="dims">8' × 31.25'</div>
           </div>
         </div>
 
         <div class="side-stack right-stack">
           <div class="room service h-fill">
             <div class="label">Mech /<br>Electrical</div>
+            <div class="dims">20' × 25'</div>
           </div>
           <div class="room classroom w-25 h-25">
             <div class="label">Classroom<br>04</div>
+            <div class="dims">25' × 25'</div>
           </div>
         </div>
       </div>
 
       <div class="room corridor big">
         <div class="label">South Hall</div>
+        <div class="dims">160' × 8'</div>
       </div>
 
       <div class="row bottom-row">
         <div class="room classroom w-25 h-25">
           <div class="label">Classroom 05</div>
+          <div class="dims">25' × 25'</div>
         </div>
         <div class="room classroom w-25 h-25">
           <div class="label">Classroom 06</div>
+          <div class="dims">25' × 25'</div>
         </div>
         <div class="room classroom w-25 h-25">
           <div class="label">Classroom 07</div>
+          <div class="dims">25' × 25'</div>
         </div>
         <div class="room classroom w-25 h-25">
           <div class="label">Classroom 08</div>
+          <div class="dims">25' × 25'</div>
         </div>
       </div>
     </section>
