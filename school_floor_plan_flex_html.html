@@ -7,7 +7,7 @@
   <style>
     :root {
       /* Plan scale: 1 px = 1 ft. */
-      --ft: 1px;
+      --ft: 10px;
       --gap: 10px;
       --border: #526274;
       --text: #1f2328;
@@ -82,7 +82,7 @@
 
     .side-hall {
       width: 100%;
-      height: calc(31.25 * var(--ft));
+      height: max-content;
       background: linear-gradient(90deg, #fff9db, var(--hall));
       color: #9a441f;
     }
@@ -192,6 +192,10 @@
             <div class="label">Classroom<br>02</div>
             <div class="dims">25' × 25'</div>
           </div>
+          <div class="room classroom w-25 h-25">
+            <div class="label">Classroom<br>03</div>
+            <div class="dims">25' × 25'</div>
+          </div>
         </div>
 
         <div class="side-hall-wrap">
@@ -224,10 +228,9 @@
         </div>
 
         <div class="side-hall-wrap">
-          <div class="room side-hall">
-            <div class="label">East<br>Hall</div>
-            <div class="dims">8' × 31.25'</div>
-          </div>
+          <div class="label">East<br>Hall</div>
+          <div class="dims">8' × 31.25'</div>
+          
         </div>
 
         <div class="side-stack right-stack">
@@ -239,6 +242,10 @@
             <div class="label">Classroom<br>04</div>
             <div class="dims">25' × 25'</div>
           </div>
+          <div class="room classroom w-25 h-25">
+            <div class="label">Classroom<br>05</div>
+            <div class="dims">25' × 25'</div>
+          </div>
         </div>
       </div>
 
@@ -248,10 +255,7 @@
       </div>
 
       <div class="row bottom-row">
-        <div class="room classroom w-25 h-25">
-          <div class="label">Classroom 05</div>
-          <div class="dims">25' × 25'</div>
-        </div>
+        
         <div class="room classroom w-25 h-25">
           <div class="label">Classroom 06</div>
           <div class="dims">25' × 25'</div>
@@ -262,6 +266,18 @@
         </div>
         <div class="room classroom w-25 h-25">
           <div class="label">Classroom 08</div>
+          <div class="dims">25' × 25'</div>
+        </div>
+        <div class="room classroom w-25 h-25">
+          <div class="label">Classroom 08</div>
+          <div class="dims">25' × 25'</div>
+        </div>
+        <div class="room classroom w-25 h-25">
+          <div class="label">Classroom 09</div>
+          <div class="dims">25' × 25'</div>
+        </div>
+        <div class="room classroom w-25 h-25">
+          <div class="label">Classroom 10</div>
           <div class="dims">25' × 25'</div>
         </div>
       </div>
